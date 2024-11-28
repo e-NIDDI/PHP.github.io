@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-include('db.php');
+include('config.php');
 
 if (isset($_SESSION['username'])) {
     header("Location: chat.php");
@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $error = "Invalid username or password";
     }
-
 }
 $conn->close();
 
@@ -32,12 +31,14 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="style_main.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <h1>Login</h1>
@@ -54,4 +55,5 @@ $conn->close();
         <p>New account? <a href="register.php">Register here</a>.</p>
     </div>
 </body>
+
 </html>

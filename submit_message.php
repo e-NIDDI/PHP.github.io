@@ -1,13 +1,13 @@
 <?php
 session_start();
-include('db.php');
+include('config.php');
 if (!isset($_SESSION['username'])) {
     exit("You are not logged in");
 }
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection (similar to chat.php)
+
 
     $sender = $_POST['sender'];
     $receiver = $_POST['receiver'];
@@ -17,6 +17,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->query($sql);
     $conn->close();
 }
-
-
-?>

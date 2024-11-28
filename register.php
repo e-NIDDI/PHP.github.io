@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-include('db.php');
+include('config.php');
 
 if (isset($_SESSION['username'])) {
     header("Location: chat.php");
@@ -51,7 +51,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link href="style_main.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
